@@ -45,10 +45,10 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CustomerResponse> findBYId(@PathVariable final String id){
+    public ResponseEntity<CustomerResponse> findById(@PathVariable final String id) {
         var customer = findCustomerByIdInputPort.find(id);
-        var customerReponse = customerMapper.toCustomerResponse(customer);
-        return ResponseEntity.ok().body(customerReponse);
+        var customerResponse = customerMapper.toCustomerResponse(customer);
+        return ResponseEntity.ok().body(customerResponse);
     }
 
     @PutMapping("/{id}")

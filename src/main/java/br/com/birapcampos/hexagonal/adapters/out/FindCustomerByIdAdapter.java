@@ -16,7 +16,8 @@ public class FindCustomerByIdAdapter implements FindCustomerByIdOutputPort {
     private CustomerEntityMapper customerEntityMapper;
 
     @Autowired
-    public FindCustomerByIdAdapter(CustomerRepository customerRepository, CustomerEntityMapper customerEntityMapper) {
+    public FindCustomerByIdAdapter(CustomerRepository customerRepository,
+                                   CustomerEntityMapper customerEntityMapper) {
         this.customerRepository = customerRepository;
         this.customerEntityMapper = customerEntityMapper;
     }
